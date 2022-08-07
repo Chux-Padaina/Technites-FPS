@@ -368,6 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368793316}
   - component: {fileID: 368793315}
+  - component: {fileID: 368793317}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -388,9 +389,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &368793316
 Transform:
   m_ObjectHideFlags: 0
@@ -408,6 +409,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -85.825, z: 0}
+--- !u!114 &368793317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368793314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd259712aba074b4cb4a933ee53d840b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  groundDrag: 5
+  jumpForce: 12
+  jumpCooldown: 0.25
+  airMultiplier: 0.4
+  myGravity: 1
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  orientation: {fileID: 234503355}
 --- !u!1 &406155511
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,9 +659,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: 0, z: 0}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -728,7 +752,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6033671, y: 1}
+    m_SensorSize: {x: 1.5155952, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -766,7 +790,7 @@ GameObject:
   - component: {fileID: 799693659}
   - component: {fileID: 799693658}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1044,7 +1068,7 @@ GameObject:
   - component: {fileID: 1466868540}
   - component: {fileID: 1466868539}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,7 +1164,7 @@ GameObject:
   - component: {fileID: 1740023132}
   - component: {fileID: 1740023131}
   - component: {fileID: 1740023130}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
